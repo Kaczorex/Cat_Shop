@@ -27,6 +27,12 @@
       </li>
     </ul> --}}
     <div class="ml-auto">
+      @if (Auth::check())
+          @if(Auth::user()->name =='Admin')
+         <a href="{{route('admin')}}"> Administrator</a> <div class="separation"> </div>
+          @endif
+      @endif
+
       @if(Auth::guest())
 
       <form class="form-inline" method="POST" action="{{ route('login') }}">

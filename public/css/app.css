@@ -10280,3 +10280,16 @@ footer p {
   padding-right: 25px;
 }
 
+.detailsMaster {
+  padding-top: 50px;
+}
+
+.separation {
+  border-right: 1px dashed #333;
+}
+
+.card > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+

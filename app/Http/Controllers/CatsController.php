@@ -59,7 +59,10 @@ $cats = Cats::select('*')->limit(3)->inRandomOrder()->unionAll($catsCouch)->unio
      */
     public function show(Cats $cats)
     {
-       $cat = Cats::find($cats)->first();
+
+
+
+       $cat = Cats::find($cats->id);
 
        return view('home.cat',compact('cat'));
     }
