@@ -10214,7 +10214,6 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
-  background-color: #fff;
 }
 
 .jumbotron p:last-child {
@@ -10291,5 +10290,9 @@ footer p {
 .card > a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.container-site {
+  padding-top: 80px;
 }
 

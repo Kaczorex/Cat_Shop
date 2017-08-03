@@ -1,11 +1,13 @@
-@extends('layout.detailsMaster')
+@extends('layout.layoutDetails')
 
 @section('content')
+
+
 
 <?php $faker = Faker\Factory::create(); ?>
 
 <div class="container">
-	
+
 	<div class="row">
 		<div class="col-md-4"><center><h3>{{$cat->name}}</h3></center>
 		</div>
@@ -17,7 +19,7 @@
 			<img src="{{$faker->imageUrl(380,300,'cats')}}">
 		</div>
 		<div class="col-md-1">
-			
+
 		</div>
 		<div class="col-md-7">
 			<div class="row">
@@ -36,7 +38,7 @@
 			<div class="row">
 				<div class="col-sm-12"><h4>{{$cat->description}}</h4></div>
 			</div>
-			
+
 		</div>
 
 	</div>
@@ -54,10 +56,6 @@
 
 
 
-</div>
 
 
-
-
-
-@endsection
+	@endsection

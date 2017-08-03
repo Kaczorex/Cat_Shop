@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'CatsController@index')->name('home');
-Route::get('/Cat/{cats}', 'CatsController@show');
+Route::get('/cat/{cats}', 'CatsController@show');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -29,6 +29,6 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-Route::get('/Admin' , 'AdminController@index')->name('admin');
+Route::get('/managment' , 'ManagmentController@index')->name('managment');
 
 // Route::get('/home', 'HomeController@home')->name('home');

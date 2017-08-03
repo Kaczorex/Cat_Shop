@@ -1,28 +1,20 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
-@include('layout.header')
+  @include('layout.header')
 </head>
 
 <body>
 
   @include('layout.navbar')
 
-  @include('layout.jumbotron')
 
-  <div class="container">
-    <div class="album text-muted">
-      <div class="container">
-        <div class="row">
 
-          @yield('content')
-          
-        </div>
-      </div>
-    </div>
-    <hr>
+  @yield('contentMaster')
 
-    @include('layout.footer')
-  </div> 
+
+  <hr>
+
+  @include('layout.footer')
 
 
 </body></html>
