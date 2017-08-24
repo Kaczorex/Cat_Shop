@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comments extends Model
 {
-    
 
-public function Cats(){
-	return $this->belongsTo(Cats::class);
-}
+
+	public function Cats(){
+		return $this->belongsTo(Cats::class);
+	}
+
+
+
 
 }

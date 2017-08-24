@@ -30,5 +30,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 Route::get('/managment' , 'ManagmentController@index')->name('managment');
-
+Route::post('/managment/update/','ManagmentController@update')->name('updateManagment');
+Route::post('/managment/insert/','ManagmentController@insert')->name('insertManagment');
 // Route::get('/home', 'HomeController@home')->name('home');

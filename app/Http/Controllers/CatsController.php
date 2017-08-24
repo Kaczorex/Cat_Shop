@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cats;
+use App\Managments as Manag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,13 +17,13 @@ class CatsController extends Controller
     public function index()
     {
 
-        //skonfigurować co ma być wyswietlane w panelu admina
+        //Manag::value($val) -> pobiera z bazy kategorie kotow
 
 
 
-$catsCouch = Cats::select('*')->where('type','Couch')->limit(3)->inRandomOrder();
-$catsLongHair = Cats::select('*')->where('type','Long Hair')->limit(3)->inRandomOrder();
-$catsShortHair = Cats::select('*')->where('type','Short Hair')->limit(3)->inRandomOrder();
+$catsCouch = Cats::select('*')->where('type',Manag::value(2))->limit(3)->inRandomOrder();
+$catsLongHair = Cats::select('*')->where('type',Manag::value(3))->limit(3)->inRandomOrder();
+$catsShortHair = Cats::select('*')->where('type',Manag::value(4))->limit(3)->inRandomOrder();
 $cats = Cats::select('*')->limit(3)->inRandomOrder()->unionAll($catsCouch)->unionAll($catsLongHair)->unionAll($catsShortHair)->get();
 
         return view('home.index',compact('cats'));
